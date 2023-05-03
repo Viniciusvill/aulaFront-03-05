@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.CSS" media="screen" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <h2>Vinícius Rodrigues Albuquerque</h2>
+
+    <p id="teste">Mudando o CSS, Darkmode e Lightmode.</p>
+
+    <nav class="buttons">
+        <button type="button" onclick="changeColorD()">Dark Mode</button>
+        <button type="button" onclick="changeColorL()">Light Mode</button>
+    </nav>
+    
+    <script>
+        const body = document.getElementsByTagName("body")[0];
+        const elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, div, li, td");
+        function changeColorD() {
+        // const h2 = document.getElementsByTagName('h2')[0];
+        // const p = document.getElementsByTagName('p')[0];
+
+            document.getElementById("teste").innerHTML = "Dark Mode";
+            body.style.backgroundColor = "#02030F";
+            elements.forEach(element => {element.style.color = "white";});
+            // h2.style.color = "white";
+            // p.style.color = "white";
+        }
+        function changeColorL() {
+            document.getElementById("teste").innerHTML = "Ligth Mode";
+            body.style.backgroundColor = "white";
+            elements.forEach(element => {element.style.color = "#02030F";});
+            // h2.style.color = "black";
+            // p.style.color = "black";
+        }
+    </script>
+</body>
+</html>
